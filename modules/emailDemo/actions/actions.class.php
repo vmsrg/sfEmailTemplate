@@ -12,4 +12,8 @@ require_once dirname(__FILE__).'/../lib/BaseemailDemoActions.class.php';
  */
 class emailDemoActions extends BaseemailDemoActions
 {
+    function executeIndex( sfWebRequest $oRequest ) 
+    {
+    	$this->getMailer()->send(new EmailHtml(sfConfig::get('app_email_template_testemail'),'emailDemo/emails/demo',array('foo'=>'bar')));
+    }
 }

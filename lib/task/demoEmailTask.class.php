@@ -32,6 +32,6 @@ EOF;
     // initialize the database connection
     parent::execute($arguments,$options);
 
-    $this->getMailer()->send(new EmailHtml('test@me.com','emailDemo/emails/demo',array('foo'=>'bar')));
+    $this->getMailer()->send(new EmailHtml(sfConfig::get('app_email_template_testemail'),'emailDemo/emails/demo',array('foo'=>'bar')));
   }
 }

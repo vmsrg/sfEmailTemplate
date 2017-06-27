@@ -30,9 +30,13 @@ Use symfony partials as email body. Supports CRON and url generation.
 
 2. Configure app.yml
 
-3. Extend all the tasks classes from sfEmailBaseTask
+3. Make sure settings.yml contains a line:
 
-4. Use simple email code:
+standard_helpers:       [Partial]
+
+4. Extend all the tasks classes from sfEmailBaseTask
+
+5. Use simple email code:
 
 $this->getMailer()->send(new EmailHtml('test@me.com','emailDemo/emails/demo',array('foo'=>'bar')));
 
@@ -40,6 +44,6 @@ or
 
 $this->getMailer()->send(new EmailText('test@me.com','emailDemo/emails/demo',array('foo'=>'bar')));
 
-5. Use >>> to specify email title
+6. Use >>> to specify email title
 
-6. See examples in modules/emailDemo
+7. See examples in modules/emailDemo

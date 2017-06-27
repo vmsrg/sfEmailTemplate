@@ -18,6 +18,6 @@ class sfEmailBaseTask extends sfBaseTask
     $_options['context']['host'] = sfConfig::get('app_email_template_url_base');
     $routing->initialize($this->dispatcher, $routing->getCache(),$_options);
     $context->set('routing',$routing); 
-    $context->getConfiguration()->loadHelpers(array('Partial','Url'));
+    // $context->getConfiguration()->loadHelpers(array('Partial','Url'));
   }
 }

@@ -4,6 +4,7 @@ class EmailHtml extends Swift_Message
   public function __construct($useremail,$partial,$vars=array())
   {
 
+    sfApplicationConfiguration::getActive()->loadHelpers(array('Partial','Url'));
   	$email = get_partial($partial,$vars);
   	list($body,$subject) = explode('>>>', $email);
 

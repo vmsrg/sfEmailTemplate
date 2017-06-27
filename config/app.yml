@@ -2,5 +2,6 @@ all:
   email_template:
     fromemail: from@test.email
     adminemail: admin@test.email
+    testemail: test@test.email
     url_base: test.email
     sitename: testEmail
