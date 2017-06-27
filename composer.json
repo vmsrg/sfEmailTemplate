@@ -1,0 +1,16 @@
+{
+    "name": "vmsrg/sfemailtemplate",
+    "type": "library",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey D",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.3 || ^7.0",
+        "ext-curl": "*"
+    }
+}
