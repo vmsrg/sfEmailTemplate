@@ -1,0 +1,3 @@
+sfEmailTemplateDemo:
+  url:   /emailDemo
+  param: { module: emailDemo, action: index }

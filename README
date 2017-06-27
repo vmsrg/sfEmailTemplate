@@ -1,2 +1,45 @@
 = sfEmailTemplatePlugin =
 
+Use symfony partials as email body. Supports CRON and url generation.
+
+= Installation =
+
+1. Add the following code to composer.json: 
+
+{
+	"repositories": {
+        "sfEmailTemplatePlugin": {
+          "type": "package",
+          "package": {
+            "name": "vmsrg/sfEmailTemplatePlugin",
+            "type": "symfony1-plugin",
+            "version": "dev-master",
+            "source": {
+              "url": "https://github.com/vmsrg/sfEmailTemplate",
+              "type": "git",
+              "reference": "master"
+            }
+          }
+        }
+	},
+    "require": {
+        "composer/installers": "dev-master",
+        "vmsrg/sfEmailTemplatePlugin": "dev-master"
+    }
+}
+
+2. Configure app.yml
+
+3. Extend all the tasks classes from sfEmailBaseTask
+
+4. Use simple email code:
+
+$this->getMailer()->send(new EmailHtml('test@me.com','emailDemo/emails/demo',array('foo'=>'bar')));
+
+or
+
+$this->getMailer()->send(new EmailText('test@me.com','emailDemo/emails/demo',array('foo'=>'bar')));
+
+5. Use >>> to specify email title
+
+6. See examples in modules/emailDemo
